@@ -3,8 +3,8 @@
 #include <array>
 #include <iostream>
 
-const int ROW = 6;
-const int COL = 6;
+const int ROW = 3;
+const int COL = 3;
 const int MAXIMUM_TRY = 10;
 
 enum class Case
@@ -53,7 +53,7 @@ void ShowMap(std::array<std::array<Case, COL>, ROW> map)
       switch (map[i][j])
       {
         case Case::Digged: std::cout << 'x'; break;
-        case Case::HideTreasure: std::cout << 'x'; break;
+        case Case::HideTreasure: std::cout << 'o'; break;
         case Case::Treasure: std::cout << '+'; break;
         case Case::Nothing: std::cout << 'o'; break;
       }
@@ -63,7 +63,7 @@ void ShowMap(std::array<std::array<Case, COL>, ROW> map)
   }
 }
 
-void GenerateTreasure(std::array<std::array<Case, COL>, ROW> map)
+void GenerateTreasure2(std::array<std::array<Case, COL>, ROW>& map)
 {
   int positionX = rand() % COL;
   int positionY = rand() % ROW;
