@@ -10,6 +10,6 @@ the [Column] where he thinks the treasure is.
 
 ## Case Status
 
-Nothing - o : Not dug yet, there is maybe a treasure in there... or nothing
-Dug - x : It's already dug and there is nothing in there
-Treasure - + : The treasure when the player dig the case
+- Nothing - o : Not dug yet, there is maybe a treasure in there... or nothing
+- Dug - x : It's already dug and there is nothing in there
+- Treasure - + : The treasure when the player dig the case
