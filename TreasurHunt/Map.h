@@ -29,8 +29,8 @@ void MakeChoice(int& x, int& y)
       std::cin.clear();
       std::cin.ignore();
     }
-  } while ((x < 0 || x >= ROW)
-      && (y < 0 || y >= COL));
+  } while (x < 0 || x >= ROW
+      || y < 0 || y >= COL);
 }
 
 void MakeMap(std::array<std::array<Case, COL>, ROW>& map)
@@ -79,6 +79,7 @@ bool Dig(std::array<std::array<Case, COL>, ROW>& map ,int x, int y)
     return true;
   }
   map[x][y] = Case::Digged;
+  std::cout << "Nothing there...\n";
   return false;
 }
 

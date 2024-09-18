@@ -34,7 +34,7 @@ int main()
     // -- Game --
 
     std::cout << "You are a treasure hunter, your goal is to find the treasure"
-                 " to become rich. But your time is limited you will have " << numberTry
+                 " to become rich.\nBut your time is limited you will have " << MAXIMUM_TRY
               << " tries to find it. The map size is [" << ROW << "/" << COL << "]\n";
 
     for(int i = 0; i < MAXIMUM_TRY; i++)
