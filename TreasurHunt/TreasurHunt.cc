@@ -21,18 +21,27 @@ int main()
 
     // Initialize the matrice
     std::array<std::array<Case, COL>, ROW> matrice;
-    
+    bool hasWin = false;
+
+    // Creating the matrice
     MakeMap(matrice);
+
+    // Put a treasure in the map
     GenerateTreasure(matrice);
 
-    while (true)
+    for(int i = 0; i < MAXIMUM_TRY; i++)
     {
+        // Displaye the map
         ShowMap(matrice);
+
+        // Player choices
         int choiceX;
         int choiceY;
 
+        // Save the player choice in choiceX and choiceY
         MakeChoice(choiceX, choiceY);
-        Dig(matrice, choiceX, choiceY);
-    }
 
+        // Dig where the specific case and update the map
+        hasWin = Dig(matrice, choiceX, choiceY);
+    }
 }

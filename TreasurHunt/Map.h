@@ -5,6 +5,7 @@
 
 const int ROW = 6;
 const int COL = 6;
+const int MAXIMUM_TRY = 10;
 
 enum class Case
 {
@@ -70,10 +71,15 @@ void GenerateTreasure(std::array<std::array<Case, COL>, ROW> map)
   map[positionX][positionY] = Case::HideTreasure;
 }
 
-void Dig(std::array<std::array<Case, COL>, ROW>& map ,int x, int y)
+bool Dig(std::array<std::array<Case, COL>, ROW>& map ,int x, int y)
 {
-  if(map[x][y] == Case::HideTreasure) map[x][y] = Case::Treasure;
-  else map[x][y] = Case::Digged;
+  if(map[x][y] == Case::HideTreasure)
+  {
+    map[x][y] = Case::Treasure;
+    return true;
+  }
+  map[x][y] = Case::Digged;
+  return false;
 }
 
 #endif
