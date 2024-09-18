@@ -11,7 +11,11 @@
  *
  * 18.09.2024
  *
- * Description :
+ * Description : In this game the player have to find the treasure randomly hided in
+ *               a 2-dimensional array. The player will have a specific number of try
+ *               to find it, if he finds it before the maximum tries he'll win, if
+ *               not he'll lose. Each try the player has to choose the [Row] and
+ *               the [Column] where he thinks the treasure is.
  */
 
 int main()
@@ -29,13 +33,14 @@ int main()
     MakeMap(matrice);
 
     // Put a treasure in the map
-    GenerateTreasure2(matrice);
+    GenerateTreasure(matrice);
 
     // -- Game --
 
     std::cout << "You are a treasure hunter, your goal is to find the treasure"
                  " to become rich.\nBut your time is limited you will have " << MAXIMUM_TRY
               << " tries to find it. The map size is [" << ROW << "/" << COL << "]\n";
+    std::cin.get();
 
     for(int i = 0; i < MAXIMUM_TRY; i++)
     {
