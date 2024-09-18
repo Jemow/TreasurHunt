@@ -38,7 +38,8 @@ int main()
 
     std::cout << "You are a treasure hunter, your goal is to find the treasure"
                  " to become rich.\nBut your time is limited you will have " << MAXIMUM_TRY
-              << " tries to find it. The map size is [" << ROW << "/" << COL << "]\n";
+              << " tries to find it. The map size is [" << ROW << "/" << COL << "]\n"
+                 "Press [Enter] to continue...";
     std::cin.get();
 
     for(int i = 0; i < MAXIMUM_TRY; i++)
@@ -63,6 +64,6 @@ int main()
     std::cout << '\n';
     
     // Display if the player won
-    if(hasWin) std::cout << "You won with " << numberTry << " tries" << '\n';
+    if(hasWin) std::cout << "You won with " << numberTry << " tries!" << '\n';
     else std::cout << "You lost bro!\n";
 }
